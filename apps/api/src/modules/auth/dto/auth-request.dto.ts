@@ -2,7 +2,7 @@ import { Transform } from 'class-transformer';
 import { Allow, IsEmail, IsString, MaxLength, MinLength, ValidateIf } from 'class-validator';
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import type { LoginRequest, RegisterRequest } from '@rental/shared';
-
+//dto la de validate
 const normalizeEmail = ({ value }: { value: unknown }): unknown =>
   typeof value === 'string' ? value.trim().toLowerCase() : value;
 

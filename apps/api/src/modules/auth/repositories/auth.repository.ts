@@ -16,7 +16,7 @@ export interface NewSessionInput {
   tokenHash: Uint8Array<ArrayBuffer>;
   expiresAt: Date;
 }
-
+// đoạn này là 1 trả về token thành công, 2 là trả về các trạng thái
 export type RefreshRotationResult =
   | { outcome: 'ROTATED'; user: AuthUserRecord; familyId: string; expiresAt: Date }
   | { outcome: 'ALREADY_ROTATED' | 'REUSE' | 'INVALID' | 'EXPIRED' | 'DISABLED' };
